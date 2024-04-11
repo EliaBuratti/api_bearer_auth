@@ -1,0 +1,6 @@
+@Ex_api_DTO_HostAddress = http://localhost:5202
+
+GET {{Ex_api_DTO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
