@@ -19,6 +19,7 @@ namespace Ex_api_DTO
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddMemoryCache();
             builder.Services.AddDbContext<FakeDatabase>(opt => opt.UseInMemoryDatabase("Ecommerce"));
             builder.Services.AddSingleton<JwtAutenticationManager>(new JwtAutenticationManager(Key));
             builder.Services.AddAutoMapper(typeof(ProductProfile).Assembly);
